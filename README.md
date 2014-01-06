@@ -50,7 +50,7 @@ Istall and configure [s3sync](https://github.com/ms4720/s3sync)
       }
 
        s3sync::add_backup {"log_sp_backup_${::hostname}":
-         target    => hiera('sp_log_dir'),
+         target    => hiera('syslog_log_dir'),
          s3bucket  => $s3bucket
        }
     }
