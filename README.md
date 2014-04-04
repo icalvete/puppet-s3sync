@@ -19,6 +19,7 @@ Istall and configure [s3sync](https://github.com/ms4720/s3sync)
 
 **Password, keys, certificates... are dummy**
 
+```puppet
     node fourandgo {
       $tenant   = 'fourandgo'
       $s3bucket = 'fagsp-backup'
@@ -54,6 +55,7 @@ Istall and configure [s3sync](https://github.com/ms4720/s3sync)
          s3bucket  => $s3bucket
        }
     }
+```
 
 ##TODO:
 
