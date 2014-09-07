@@ -10,7 +10,8 @@ class s3sync (
   $repo_user             = $s3sync::params::repo_user,
   $repo_pass             = $s3sync::params::repo_pass,
   $repo_path             = $s3sync::params::repo_path,
-  $repo_resource         = $s3sync::params::package
+  $repo_resource         = $s3sync::params::package,
+  $install_path          = $s3sync::params::install_path
 
 ) inherits s3sync::params {
 

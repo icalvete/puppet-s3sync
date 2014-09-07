@@ -13,8 +13,14 @@ define s3sync::add_backup (
     fail('s3bucket parameter can\'t be empty')
   }
 
+  if $rubyversion =~ /^1\.9/ {
+    $command = "${s3sync::install_path}/s3sync/bin/s3sync"
+  } else {
+    $command = "${s3sync::install_path}/s3sync/s3sync.rb"
+  }
+
   cron { "add_backup_${name}_${target}":
-    command => "/root/s3sync/s3sync.rb -r ${target} ${s3bucket}:${::hostname}",
+    command => "${command} -r ${target} ${s3bucket}:${::hostname}",
     user    => 'root',
     hour    => '4',
     minute  => '0'

@@ -1,7 +1,10 @@
 class s3sync::params {
+
+  $install_path = '/root'
+
   case $::operatingsystem {
     default: {
-      $s3sync_dir_conf = '/root/.s3conf'
+      $s3sync_dir_conf = "${install_path}/.s3conf"
       $repo_scheme     = hiera('sp_repo_scheme')
       $repo_domain     = hiera('sp_repo_domain')
       $repo_port       = hiera('sp_repo_port')
