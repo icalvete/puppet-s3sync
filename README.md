@@ -1,21 +1,21 @@
-#puppet-s3sync
+# puppet-s3sync
 
 Puppet manifest to install and configure s3sync
 
 [![Build Status](https://secure.travis-ci.org/icalvete/puppet-s3sync.png)](http://travis-ci.org/icalvete/puppet-s3sync)
 
-##Actions:
+## Actions:
 
 Istall and configure [s3sync](https://github.com/ms4720/s3sync)
 
-##Requires:
+## Requires:
 
 * [hiera](http://docs.puppetlabs.com/hiera/1/index.html)
 * https://github.com/icalvete/puppet-common but really only need:
   + common::add_env define.
   + An http server and a tgz package or use common::down_resource
 
-##Example:
+## Example:
 
 **Password, keys, certificates... are dummy**
 
@@ -57,11 +57,11 @@ Istall and configure [s3sync](https://github.com/ms4720/s3sync)
     }
 ```
 
-##TODO:
+## TODO:
 
 * Refactor to choose the cron setup.
 
 
-##Authors:
+## Authors:
 
 Israel Calvete Talavera <icalvete@gmail.com>
